@@ -1,0 +1,509 @@
+@font-face {
+  font-family: "nunitolight";
+  src: url("fonts/Nunito-Light-webfont.eot");
+  src: url("fonts/Nunito-Light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Nunito-Light-webfont.woff2") format("woff2"),
+    url("fonts/Nunito-Light-webfont.woff") format("woff"),
+    url("fonts/Nunito-Light-webfont.ttf") format("truetype"),
+    url("fonts/Nunito-Light-webfont.svg#nunitolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "reset.css";
+@dark-gray: #1b1e22;
+@light-gray: #bec4cc;
+@off-white: #f2f3f6;
+@blue-med: #20bbfc;
+@white: #fff;
+@text-gray: #b1b3b4;
+@black: #000;
+@orange: #ff8c00;
+@dark-orange: #dc3c00;
+@slide-left: l-slide 0.5s both ease-out;
+@slide-right: r-slide 0.5s both ease-out;
+@slide-bottom: b-slide 0.5s both ease-out;
+@fade-in: fade-in 0.7s both ease-out;
+@fade-out: fade-out 0.7s both ease-out;
+@fade-in-r-slide: fade-in-r-slide 1s both ease-out;
+@fade-in-l-slide: fade-in-l-slide 0.5s both ease-out;
+@iphone4-portrait: ~"only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)";
+@iphone4-landscape: ~"only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)";
+@iphone5-portrait: ~"only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)";
+@iphone5-landscape: ~"only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)";
+@iphone6-portrait: ~"only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)";
+@iphone6-landscape: ~"only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)";
+
+html {
+  overflow-y: auto;
+  height: 100%;
+}
+
+body {
+  white-space: nowrap;
+  background-color: @dark-gray;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+}
+
+::selection {
+  color: @white;
+  background-color: @orange;
+}
+
+header {
+  background: @dark-gray;
+  color: @white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  opacity: 0.95;
+
+  nav {
+    white-space: nowrap;
+    font-size: 0;
+
+    button {
+      display: inline-block;
+      vertical-align: top;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      -moz-transition: background 0.4s ease-out, color 0.8s ease-out;
+      -o-transition: background 0.4s ease-out, color 0.8s ease-out;
+      -webkit-transition: background 0.4s ease-out, color 0.8s ease-out;
+      transition: background 0.4s ease-out, color 0.8s ease-out;
+      height: 50px;
+      width: 33.33%;
+      padding: 0;
+      margin: 0;
+      color: @blue-med;
+      font-size: 1.1rem;
+      font-family: "Avenir Next", "nunitolight";
+      -webkit-font-smoothing: antialiased;
+      -moz-animation: @slide-bottom;
+      -o-animation: @slide-bottom;
+      -webkit-animation: @slide-bottom;
+      animation: @slide-bottom;
+      -webkit-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+        0 0 0 #000000;
+      -moz-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+        0 0 0 #000000;
+      box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+        0 0 0 #000000;
+
+      &:hover {
+        color: @white;
+      }
+
+      &.selected {
+        color: @text-gray;
+      }
+    }
+  }
+}
+
+*:focus {
+  outline: 0;
+}
+
+article {
+  background: @dark-gray;
+  color: @text-gray;
+  text-align: center;
+  padding: 150px 0 125px;
+  overflow: hidden;
+  position: relative;
+  white-space: normal;
+  z-index: 100;
+  height: auto;
+
+  .container {
+    padding: 0 40px 0 40px;
+  }
+
+  &.section02 {
+    background: @off-white;
+    color: @dark-gray;
+    height: auto;
+
+    img {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      border: solid 4px @white;
+      max-width: 100%;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: @blue-med;
+  margin: 0 auto;
+  padding: 0 0 30px 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 2.1rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+  line-height: 1.66rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+}
+
+p {
+  font-size: 1.11rem;
+  line-height: 1.667rem;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  span {
+    font-weight: bold;
+    color: @blue-med;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 0 40px 0 40px;
+
+  img {
+    display: inline-block;
+    margin: 0 0 0 6px;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+
+  p {
+    display: inline-block;
+    text-align: center;
+    color: @text-gray;
+    font-size: 0.7778rem;
+    margin: 0 auto;
+    opacity: 0.5;
+  }
+}
+
+a {
+  color: @text-gray;
+  text-decoration: none;
+}
+
+.slide-in-left {
+  -moz-animation: @fade-in-l-slide;
+  -o-animation: @fade-in-l-slide;
+  -webkit-animation: @fade-in-l-slide;
+  animation: @fade-in-l-slide;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.slide-in-right {
+  -moz-animation: @fade-in-r-slide;
+  -o-animation: @fade-in-r-slide;
+  -webkit-animation: @fade-in-r-slide;
+  animation: @fade-in-r-slide;
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.fade-in {
+  -moz-animation: @fade-in;
+  -o-animation: @fade-in;
+  -webkit-animation: @fade-in;
+  animation: @fade-in;
+  -moz-animation-delay: 1.8s;
+  -o-animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.b-slide {
+  -moz-animation: @slide-bottom;
+  -o-animation: @slide-bottom;
+  -webkit-animation: @slide-bottom;
+  animation: @slide-bottom;
+  -moz-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes b-slide {
+  from {
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes b-slide {
+  from {
+    -moz-transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes b-slide {
+  from {
+    -webkit-transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-l-slide {
+  from {
+    -moz-transform: translateX(-500px);
+    -ms-transform: translateX(-500px);
+    -o-transform: translateX(-500px);
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in-l-slide {
+  from {
+    -moz-transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    -moz-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-l-slide {
+  from {
+    -webkit-transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-r-slide {
+  0% {
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  50% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in-r-slide {
+  0% {
+    -moz-transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  50% {
+    -moz-transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-r-slide {
+  0% {
+    -webkit-transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media @iphone6-portrait, @iphone5-portrait, @iphone4-portrait {
+  html {
+    font-size: 97%;
+    -webkit-text-size-adjust: none;
+
+    body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      height: 100%;
+
+      header {
+        display: none;
+      }
+
+      article {
+        padding: 40px 0 40px 0;
+      }
+    }
+  }
+}
+
+@media @iphone6-landscape, @iphone5-landscape, @iphone4-landscape {
+  html {
+    font-size: 90%;
+    -webkit-text-size-adjust: none;
+
+    body {
+      article {
+        padding: 90px 0 50px 0;
+      }
+    }
+  }
+}
+
+.ie-eight {
+  display: none;
+}
