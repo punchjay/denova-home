@@ -69,7 +69,7 @@ article {
   background: #1b1e22;
   color: #b1b3b4;
   text-align: center;
-  padding: 150px 0 125px;
+  padding: 150px 0 50px;
   overflow: hidden;
   position: relative;
   white-space: normal;
@@ -79,16 +79,14 @@ article {
 article .container {
   padding: 0 40px 0 40px;
 }
-article.section02 {
-  background: #f2f3f6;
-  color: #1b1e22;
-  height: auto;
-}
 article.section02 img {
   display: inline-block;
   margin: 10px 10px 0 0;
   border: solid 4px #fff;
   max-width: 100%;
+}
+article.section03 {
+  padding-bottom: 110px;
 }
 h1,
 h2,
@@ -124,6 +122,9 @@ p {
   text-align: center;
   padding: 0 0 30px 0;
 }
+p.lead-in {
+  color: #fff;
+}
 p span,
 h1 span,
 h2 span,
@@ -131,6 +132,12 @@ h3 span,
 h4 span {
   font-weight: bold;
   color: #20bbfc;
+}
+.small-copy {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #b1b3b4;
+  opacity: 0.7;
 }
 footer {
   text-align: center;
@@ -146,9 +153,9 @@ footer p {
   display: inline-block;
   text-align: center;
   color: #b1b3b4;
-  font-size: 0.7778rem;
+  font-size: 0.8rem;
   margin: 0 auto;
-  opacity: 0.75;
+  opacity: 0.7;
 }
 a {
   color: #b1b3b4;

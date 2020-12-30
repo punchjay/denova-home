@@ -108,7 +108,7 @@ article {
   background: @dark-gray;
   color: @text-gray;
   text-align: center;
-  padding: 150px 0 125px;
+  padding: 150px 0 50px;
   overflow: hidden;
   position: relative;
   white-space: normal;
@@ -120,16 +120,16 @@ article {
   }
 
   &.section02 {
-    background: @off-white;
-    color: @dark-gray;
-    height: auto;
-
     img {
       display: inline-block;
       margin: 10px 10px 0 0;
       border: solid 4px @white;
       max-width: 100%;
     }
+  }
+
+  &.section03 {
+    padding-bottom: 110px;
   }
 }
 
@@ -171,6 +171,10 @@ p {
   max-width: 650px;
   text-align: center;
   padding: 0 0 30px 0;
+
+  &.lead-in {
+    color: @white;
+  }
 }
 
 p,
@@ -182,6 +186,13 @@ h4 {
     font-weight: bold;
     color: @blue-med;
   }
+}
+
+.small-copy {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: @text-gray;
+  opacity: 0.7;
 }
 
 footer {
@@ -199,9 +210,9 @@ footer {
     display: inline-block;
     text-align: center;
     color: @text-gray;
-    font-size: 0.7778rem;
+    font-size: 0.8rem;
     margin: 0 auto;
-    opacity: 0.75;
+    opacity: 0.7;
   }
 }
 

@@ -4,7 +4,7 @@ Legacy portfolio site built 2015. Updated 2020.
 
 Temporary portfolio till replacement React app is built.
 
-## Known Legacy code and best practices issues:
+## Known legacy code and best practices issues:
 
 - jQuery for animations and scrolling
 - Blob storage for images
