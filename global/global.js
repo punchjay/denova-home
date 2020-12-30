@@ -29,10 +29,10 @@ $(function () {
     //end polyfill
 
     //nav animations and scrolling
-    var $navBt = $('.nav-bt');
+    const $navBt = $('.nav-bt');
 
     $navBt.on('click', function () {
-        var $this = $(this),
+        const $this = $(this),
             thisId = $this.prop('id'),
             $btAnchor = $('#' + thisId + '-anchor');
 
@@ -53,8 +53,8 @@ $(function () {
         return false;
     });
 
-    var currentDate = new Date();
-    var yearDate = currentDate.getFullYear();
+    const currentDate = new Date();
+    const yearDate = currentDate.getFullYear();
     document.getElementById('year-date').innerHTML = yearDate;
 
     //google analytics
