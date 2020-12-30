@@ -69,7 +69,7 @@ article {
   background: #1b1e22;
   color: #b1b3b4;
   text-align: center;
-  padding: 150px 0 50px;
+  padding: 150px 0 125px;
   overflow: hidden;
   position: relative;
   white-space: normal;
@@ -84,9 +84,6 @@ article.section02 img {
   margin: 10px 10px 0 0;
   border: solid 4px #fff;
   max-width: 100%;
-}
-article.section03 {
-  padding-bottom: 110px;
 }
 h1,
 h2,
