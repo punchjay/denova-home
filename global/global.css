@@ -69,7 +69,7 @@ article {
   background: #1b1e22;
   color: #b1b3b4;
   text-align: center;
-  padding: 150px 0 120px;
+  padding: 150px 0 50px;
   overflow: hidden;
   position: relative;
   white-space: normal;
@@ -383,7 +383,7 @@ a {
     display: none;
   }
   html body article {
-    padding: 65px 0 25px 0;
+    padding: 95px 0 25px 0;
   }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
