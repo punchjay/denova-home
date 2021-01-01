@@ -1,0 +1,13 @@
+{
+    "name": "punchjay.github.io",
+    "version": "2.0.0",
+    "description": "portfolio site",
+    "main": "index.html",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/punchjay"
+    },
+    "author": "Edward Jay Gibble",
+    "license": "MIT",
+    "homepage": "https://punchjay.github.io/denova-home/"
+  }
