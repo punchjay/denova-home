@@ -52,8 +52,18 @@ header {
   overflow: hidden;
   height: 50px;
   opacity: 0.95;
+  -webkit-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+    0 0 0 #000000;
+  -moz-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+    0 0 0 #000000;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
+    0 0 0 #000000;
 
   nav {
+    padding: 0 20%;
     white-space: nowrap;
     font-size: 0;
 
@@ -79,15 +89,6 @@ header {
       -o-animation: @slide-bottom;
       -webkit-animation: @slide-bottom;
       animation: @slide-bottom;
-      -webkit-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
-        0 0 0 #000000;
-      -moz-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
-        0 0 0 #000000;
-      box-shadow: 0 2px 0 rgba(255, 255, 255, 0.05),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 0 0 #000000, 0 0 0 #000000,
-        0 0 0 #000000;
 
       &:hover {
         color: @white;
@@ -116,6 +117,9 @@ article {
   height: auto;
 
   .container {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 0 40px 0 40px;
   }
 
@@ -164,7 +168,7 @@ p {
   font-size: 1.11rem;
   line-height: 1.667rem;
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 690px;
   text-align: center;
   padding: 0 0 30px 0;
 
