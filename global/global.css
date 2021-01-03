@@ -389,6 +389,10 @@ a {
   html body article {
     padding: 95px 0 25px 0;
   }
+  html body article .container {
+    max-width: none;
+    padding: 0 10px;
+  }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   html {
