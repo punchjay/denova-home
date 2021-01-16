@@ -50,8 +50,6 @@ header nav button {
   margin: 0;
   color: #20bbfc;
   font-size: 1.1rem;
-  font-family: "Avenir Next", "nunitolight";
-  -webkit-font-smoothing: antialiased;
   -moz-animation: b-slide 0.5s both ease-out;
   -o-animation: b-slide 0.5s both ease-out;
   -webkit-animation: b-slide 0.5s both ease-out;
